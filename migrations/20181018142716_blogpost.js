@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments()
     table.string('title').defaultTo('No Title')
     table.text('content')
+    table.timestamps(true, true)
   })
 };
 
