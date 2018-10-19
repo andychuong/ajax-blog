@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('blogpost', table => {
     table.increments()
     table.string('title').defaultTo('No Title')
-    table.text('content')
+    table.text('content').defaultTo('')
     table.timestamps(true, true)
   })
 };
