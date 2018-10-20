@@ -56,7 +56,7 @@ router.patch('/:id', (req, res, next) => {
         // all good, it was found-- update it
         let updatedBlogpost = results[0]
         if (req.body.title) { updatedBlogpost.title = req.body.title }
-        if (req.body.director) { updatedBlogpost.content = req.body.content }
+        if (req.body.content) { updatedBlogpost.content = req.body.content }
         // UPDATE the record in the DB
         knex('blogpost')
           .update(updatedBlogpost)
